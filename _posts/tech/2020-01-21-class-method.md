@@ -51,46 +51,11 @@ label.attributedText = attrStr
 attrStr.setAttributes([NSAttributedString.Key.baselineOffset: 5], range: range1)
 ```
 
-
-
-# 2.时间及时间戳处理
-
-- 正常的调用`Date()`方法获取的是手机里显示的时间，而非标准时间
-
-## 2.1 获取时间戳
-
-```swift
-//获取当前手机设置的时间，而非标准时间
-let now = Date()
-let timeInterval = now.timeIntervalSince1970
-print("当前的时间戳：\(timeInterval)")
-
-```
-
-## 2.2 将时间戳转换为具体时间
-
-```swift
-let date = Date(timeIntervalSince1970: timeInterval)
-let formatter = DateFormatter()
-formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-print("时间戳对应的时间：\(formatter.string(from: date))")
-
-```
-
-## 2.3 将Date直接转换为具体时间
-
-```swift
-let now = Date()
-let formatter = DateFormatter()
-formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-print("时间戳对应的时间：\(formatter.string(from: now))")
-```
-
 <br>
 
+
+
 # 2.UIColor
-
-
 
 ## 2.1 颜色十六进制转换
 
@@ -116,5 +81,42 @@ extension UIColor{
     }
 }
 
+```
+
+<br>
+
+
+
+# 3.时间及时间戳处理
+
+- 正常的调用`Date()`方法获取的是手机里显示的时间，而非标准时间
+
+## 3.1 获取时间戳
+
+```swift
+//获取当前手机设置的时间，而非标准时间
+let now = Date()
+let timeInterval = now.timeIntervalSince1970
+print("当前的时间戳：\(timeInterval)")
+
+```
+
+## 3.2 将时间戳转换为具体时间
+
+```swift
+let date = Date(timeIntervalSince1970: timeInterval)
+let formatter = DateFormatter()
+formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+print("时间戳对应的时间：\(formatter.string(from: date))")
+
+```
+
+## 3.3 将Date直接转换为具体时间
+
+```swift
+let now = Date()
+let formatter = DateFormatter()
+formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+print("时间戳对应的时间：\(formatter.string(from: now))")
 ```
 
