@@ -86,3 +86,37 @@ formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 print("时间戳对应的时间：\(formatter.string(from: now))")
 ```
 
+
+
+
+
+# 2.UIColor
+
+
+
+## 2.1 颜色十六进制转换
+
+> 将颜色的十六进制字符串转换为具体颜色样式
+
+
+
+```swift
+extension UIColor{
+    convenience init(valueStr:String) {
+        let scanner:Scanner = Scanner(string:valueStr)
+        var valueRGB:UInt32 = 0
+        if scanner.scanHexInt32(&valueRGB) == false {
+            self.init(red: 0,green: 0,blue: 0,alpha: 0)
+        }else{
+            self.init(
+                red:CGFloat((valueRGB & 0xFF0000)>>16)/255.0,
+                green:CGFloat((valueRGB & 0x00FF00)>>8)/255.0,
+                blue:CGFloat(valueRGB & 0x0000FF)/255.0,
+                alpha:CGFloat(1.0)
+            )
+        }
+    }
+}
+
+```
+
