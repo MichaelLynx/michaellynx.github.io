@@ -54,6 +54,15 @@ iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专�
 
 
 
+<b>关注人列表</b><br>
+
+<ul>
+  <li>周小鱼：<a href="http://zhoulingyu.com" target="_blank">http://zhoulingyu.com</a></li>
+  <li>Kt张星宇：<a href="https://bestswifter.com/#open" target="_blank">https://bestswifter.com</a></li>
+</ul>
+
+
+
 <b>博客发展历史</b><br>
 
 <ul>
