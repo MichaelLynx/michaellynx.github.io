@@ -7,7 +7,7 @@ headerImage: false
 tag:
 - essay
 star: false
-category: tech
+category: blog
 author: Lynx
 description: The summary of the blog.
 ---
