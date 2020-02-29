@@ -9,7 +9,7 @@ tag:
 star: false
 category: blog
 author: Lynx
-description: The summary of the blog.
+description: 围观了下肖战粉丝举报ao3和lofter的事，想了些东西.
 ---
 
 
