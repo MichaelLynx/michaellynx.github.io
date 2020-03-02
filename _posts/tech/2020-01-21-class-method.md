@@ -120,3 +120,26 @@ formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 print("时间戳对应的时间：\(formatter.string(from: now))")
 ```
 
+<br>
+
+
+
+# 4.Data
+
+## 4.1 data转换为十六进制字符串
+
+```swift
+extension Array where Element == UInt8 {
+    var hexString: String {
+        return self.compactMap { String(format: "%02x", $0).uppercased() }
+            .joined(separator: "")
+    }
+}
+```
+
+
+
+
+
+
+
