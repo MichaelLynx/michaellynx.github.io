@@ -10,14 +10,18 @@ tag:
 star: false
 category: tech
 author: Lynx
-description: 该文档用于记录iOS中常用的文件的存入与取出方法。
+description: iOS的数据存取方法(Bundle、沙盒、App间分享)。最新更改时间：2020/03/09
 ---
 
 
 
 # 1.Bundle文件的读取
 
-Bundle文件直接存储在工程项目文件夹内
+> Bundle文件直接存储于工程目录下
+
+
+
+## 1.1 Bundle文件直接存储在工程项目文件夹内
 
 ```swift
 //获取直接存放如工程的名为zz.png的图片
@@ -27,7 +31,7 @@ let bImage = UIImage(contentsOfFile: path!)
 
 
 
-文件存放在工程目录的.Bundle文件内
+## 1.2 文件存放在工程目录的.Bundle文件内
 
 ```swift
 let bundlePath = Bundle.main.path(forResource: "MCircleBoard", ofType: "bundle") ?? ""
@@ -52,13 +56,72 @@ let image = UIImage(named: imageName, in: bundle, compatibleWith: nil) ?? UIImag
 
 
 
+## 1.3 获取工程目录内的文件列表
+
+获取目录下的路径及其文件名
+
+```swift
+//文件主路径
+let bundlePath = Bundle.main.resourcePath!
+let fileManager = FileManager.default
+let dirArray = try?fileManager.contentsOfDirectory(atPath: bundlePath)
+
+let predicate = NSPredicate(format: "pathExtension == %@", "bin")
+//文件名列表
+var fileNameArray:[String] = (dirArray! as NSArray).filtered(using: predicate) as! [String]
+```
+
+- 通过predicate筛选出需要的文件，如果不需要筛选，直接使用`dirArray`就行。
+- 工程目录下的文件与我们直接在xcode上看到的文件名不一样。`.m`、`.h`、`.swift`、`.storyboard`等文件不会显示出来，`.plist`、`.dylib`等文件会照常显示，`.xib`文件则会显示为`.nib`。
+
+<br>
+
 # 2.沙盒文件的写入与获取
 
 - 沙盒即程序自己的目录，即文件的本地化存储
 - `swift`暂未开放自己读写文件的操作，要实现沙盒文件的读取与写入必须将文件转换为`oc`的类
 - 文件写入时可以直接加后缀也可以不加，不影响取出后的使用（取出时会转换成可用的样式）
 
-## 2.1 图片的存取
+## 2.1  获取沙盒文件目录下的文件名列表
+
+```swift
+let path = NSHomeDirectory().appending("/Documents/")
+let dirArray: Array = try!fileManager.contentsOfDirectory(atPath: path)
+
+let predicate = NSPredicate(format: "pathExtension == %@", "bin")
+let nameArray: [String] = (dirArray as NSArray).filtered(using: predicate) as! [String]
+```
+
+- 通过predicate筛选出需要的文件，如果不需要筛选，直接使用`dirArray`就行。
+- 得到沙盒文件的文件名后可以直接将其拼接到沙盒的路径下并将其取出
+
+
+
+## 2.2 移除文件
+
+```swift
+let pathHead:String = NSHomeDirectory().appending("/Documents/")
+
+let arrayName = "theArray"
+let path = NSHomeDirectory().appending("/Documents/").appending(arrayName)
+
+//移除文件
+try? FileManager.default.removeItem(atPath: path)
+
+//移除所有文件
+func deleteAllFile() {
+    let enumerator = FileManager.default.enumerator(atPath: pathHead)
+    guard enumerator != nil else {return}
+    
+    for fileName in enumerator!.allObjects as! [String] {
+        deleteFile(fileName: fileName)
+    }
+}
+```
+
+
+
+## 2.3 图片的存取
 
 保存图片到沙盒
 
@@ -68,10 +131,10 @@ let image = UIImage(named: "fox")
 let imageName = "theFox"
 
 if let imageData =
-currentImage.jpegData(compressionQuality: percent) {
+image.jpegData(compressionQuality: percent) {
     let path = NSHomeDirectory().appending("/Documents/").appending(imageName)
     
-    try? imageData.write(to: URL(fileURLWithPath: fullPath(imageName)), options: Data.WritingOptions.atomic)
+    try? imageData.write(to: URL(fileURLWithPath: path), options: Data.WritingOptions.atomic)
     
     print("Image path:\(path)")
 }
@@ -85,7 +148,7 @@ currentImage.jpegData(compressionQuality: percent) {
 let imageName = "theFox"
 let path = NSHomeDirectory().appending("/Documents/").appending(imageName)
 
-if let image = UIImage(contentsOfFile: fullPath(imageName)) {
+if let image = UIImage(contentsOfFile: path) {
   	print("获取图片成功")
     //return image
 } else {
@@ -97,7 +160,7 @@ if let image = UIImage(contentsOfFile: fullPath(imageName)) {
 
 
 
-## 2.2 字典的存取
+## 2.4 字典的存取
 
 保存字典到沙盒
 
@@ -118,7 +181,7 @@ print("Dictionary path:\(path)")
 let dicName = "theDic"
 let path = NSHomeDirectory().appending("/Documents/").appending(dicName)
 
-if let dic = NSDictionary(contentsOfFile: fullPath(dicName)) {
+if let dic = NSDictionary(contentsOfFile: path) {
   	print("获取字典成功")
     //return dic as? Dictionary
 } else {
@@ -130,7 +193,7 @@ if let dic = NSDictionary(contentsOfFile: fullPath(dicName)) {
 
 
 
-## 2.3 数组的存取
+## 2.5 数组的存取
 
 保存数组到沙盒
 
@@ -150,7 +213,7 @@ print("Array path:\(path)")
 let arrayName = "theArray"
 let path = NSHomeDirectory().appending("/Documents/").appending(arrayName)
 
-if let array = NSArray(contentsOfFile: fullPath(arrayName)) {
+if let array = NSArray(contentsOfFile: path) {
   	print("获取数组成功")
     //return array as Array
 } else {
@@ -160,30 +223,7 @@ if let array = NSArray(contentsOfFile: fullPath(arrayName)) {
 
 ```
 
-
-
-## 2.4 移除文件
-
-```swift
-let pathHead:String = NSHomeDirectory().appending("/Documents/")
-
-let arrayName = "theArray"
-let path = NSHomeDirectory().appending("/Documents/").appending(arrayName)
-
-//移除文件
-try? FileManager.default.removeItem(atPath: path)
-
-//移除所有文件
-func deleteAllFile() {
-    let enumerator = FileManager.default.enumerator(atPath: pathHead)
-    guard enumerator != nil else {return}
-    
-    for fileName in enumerator!.allObjects as! [String] {
-        deleteFile(fileName: fileName)
-    }
-}
-
-```
+<br>
 
 
 
@@ -286,4 +326,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 
 ```
+
+<br>
 
