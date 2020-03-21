@@ -11,6 +11,8 @@ layout: page
 
 iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专线及其司机端、使命者、乐宝、zayaCare等项目。
 
+欢迎通过邮件或者其他途径交流技术，相互学习。
+
 
 
 <b>个人爱好</b><br>
@@ -50,15 +52,6 @@ iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专�
     <li>stackoverflow:<a href="https://stackoverflow.com/users/12045492/blacksage" target="_blank">Lynx</a></li>
   	<li>segmentfault:<a href="https://segmentfault.com/u/blacksage" target="_blank">Lynx</a></li>
     <li>邮箱：<a href = "mailto:MichaelLynxCN@gmail.com">MichaelLynxCN@gmail.com</a></li>
-</ul>
-
-
-
-<b>关注人列表</b><br>
-
-<ul>
-  <li>周小鱼：<a href="http://zhoulingyu.com" target="_blank">http://zhoulingyu.com</a></li>
-  <li>Kt张星宇：<a href="https://bestswifter.com/#open" target="_blank">https://bestswifter.com</a></li>
 </ul>
 
 
