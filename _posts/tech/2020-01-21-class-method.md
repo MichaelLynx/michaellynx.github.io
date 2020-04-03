@@ -10,7 +10,7 @@ tag:
 star: false
 category: tech
 author: Lynx
-description: 该文档用于记录iOS中常用的类方法
+description: 该文档用于记录iOS中常用的类方法。最新更改时间：2020/04/03
 ---
 
 > 该文档用于记录iOS中常用的类方法
@@ -137,9 +137,23 @@ extension Array where Element == UInt8 {
 }
 ```
 
+<br>
 
 
 
+# 5.Dictionary
 
+## 5.1 重载操作符实现字典添加字典
 
+```swift
+func += <KeyType, ValueType> ( left: inout Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
+    for (k, v) in right {
+        left.updateValue(v, forKey: k)
+    }
+}
+```
+
+- 直接添加进swift文件内，需要时直接使用`+=`操作符将另一个字典载入当前字典内
+
+<br>
 
