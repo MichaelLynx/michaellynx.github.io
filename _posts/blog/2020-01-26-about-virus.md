@@ -6,7 +6,7 @@ image: /assets/images/markdown.jpg
 headerImage: false
 tag:
 - essay
-- 武汉2019-nCov肺炎病毒
+- COVID-19
 star: false
 category: blog
 author: Lynx
