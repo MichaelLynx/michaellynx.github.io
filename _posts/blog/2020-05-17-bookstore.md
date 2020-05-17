@@ -15,7 +15,7 @@ description: 小的时候经常去各种书店看书，而今再去闲逛，感�
 
 
 
-![书店](/assets/images/pic/20200517bookstore.HEIC)
+![书店](/assets/images/pic/20200517bookstore.jpg)
 
 
 
