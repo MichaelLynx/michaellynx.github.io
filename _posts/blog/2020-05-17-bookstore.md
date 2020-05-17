@@ -14,10 +14,6 @@ description: 小的时候经常去各种书店看书，而今再去闲逛，感�
 
 
 
-![书店](/assets/images/pic/20200517bookstore.jpg)
-
-
-
 再去一趟书店，
 
 仿若回到十年之前，
@@ -33,4 +29,8 @@ description: 小的时候经常去各种书店看书，而今再去闲逛，感�
 仿佛只是翻着老照片，
 
 蜻蜓点水，水过无痕。
+
+
+
+![书店](/assets/images/pic/20200517bookstore.jpg)
 
