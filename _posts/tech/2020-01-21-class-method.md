@@ -10,7 +10,7 @@ tag:
 star: false
 category: tech
 author: Lynx
-description: 该文档用于记录iOS中常用的类方法。最新更改时间：2020/04/03
+description: 该文档用于记录iOS中常用的类方法。最新更改时间：2020/08/26
 ---
 
 > 该文档用于记录iOS中常用的类方法
