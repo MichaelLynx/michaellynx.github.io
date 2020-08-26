@@ -120,6 +120,22 @@ formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 print("时间戳对应的时间：\(formatter.string(from: now))")
 ```
 
+## 3.4设置当天整点时间
+
+- 对设置以外的较小时间单位默认缺省置零，如只设置到日，则时分秒皆置零
+
+```objective-c
+NSDate *now = [NSDate date];
+NSCalendar *calendar = [NSCalendar currentCalendar];
+NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute fromDate:now];
+NSDate *startDate = [calendar dateFromComponents:components];
+NSInteger timeStamp = [startDate timeIntervalSince1970];
+
+NSLog(@"now:%@, date:%@, stamp:%ld", now, startDate, timeStamp);
+```
+
+
+
 <br>
 
 
