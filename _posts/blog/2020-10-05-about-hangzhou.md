@@ -2,8 +2,8 @@
 title: "杭州"
 layout: post
 date: 2020-10-05 18:07
-image: /assets/images/pic/20201005hangzhou.jpg
-headerImage: true
+image: /assets/images/markdown.jpg
+headerImage: false
 tag:
 - essay
 star: false
@@ -11,6 +11,10 @@ category: blog
 author: Lynx
 description: 杭州这座城市。
 ---
+
+
+
+![杭州](/assets/images/pic/20201005hangzhou.jpg)
 
 
 
