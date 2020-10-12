@@ -3,7 +3,7 @@ title: "杭州"
 layout: post
 date: 2020-10-05 18:07
 image: /assets/images/20201005hangzhou
-headerImage: false
+headerImage: true
 tag:
 - essay
 star: false
