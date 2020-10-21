@@ -9,7 +9,7 @@ tag:
 star: false
 category: blog
 author: Lynx
-description: 对《姜子牙》这部电影的看法。
+description: 《姜子牙》影评
 ---
 
 
