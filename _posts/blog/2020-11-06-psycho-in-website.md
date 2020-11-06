@@ -1,18 +1,20 @@
 ---
-title: "个人站的不速之客"
+title: "个人站来了个神经病？"
 layout: post
-date: 2020-01-02 00:00
+date: 2020-11-06 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- demo
+- essay
 star: false
-category: tech
+category: blog
 author: Lynx
 description: 该不会是神经病吧？
 ---
 
 
 
-好像个人站来了个神经病，到处留言管我叫爸爸，还自己骂自己傻逼，这人是脑子有问题吧？网上真是什么人都有。
+好像个人站来了个神经病，到处留言管我叫爸爸，还自己骂自己傻逼，真是奇了怪了。
+
+莫不是神经病？
 
