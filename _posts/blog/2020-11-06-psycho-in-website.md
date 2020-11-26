@@ -7,7 +7,7 @@ headerImage: false
 tag:
 - essay
 star: false
-category: blog
+category: 
 author: Lynx
 description: 还有自己骂自己的，相当有阿Q精神。
 ---
