@@ -5,9 +5,9 @@ date: 2020-11-06 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- essay
+- essay1
 star: false
-category: 
+category: blog1
 author: Lynx
 description: 还有自己骂自己的，相当有阿Q精神。
 ---
