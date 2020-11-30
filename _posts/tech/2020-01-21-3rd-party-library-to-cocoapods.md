@@ -5,6 +5,7 @@ date: 2020-01-21 16:51
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
+- ios
 - cocoapods
 star: false
 category: tech
