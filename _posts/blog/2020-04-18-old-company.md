@@ -1,5 +1,5 @@
 ---
-title: "旧公司的交接"
+title: "对创业公司的看法"
 layout: post
 date: 2020-04-18 00:28
 image: /assets/images/markdown.jpg
@@ -9,7 +9,7 @@ tag:
 star: false
 category: blog
 author: Lynx
-description: 换了工作，在和旧公司做交接的时候才算真正看明白了一些东西。
+description: 换了工作后，看明白了一些东西。
 ---
 
 
