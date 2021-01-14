@@ -42,18 +42,6 @@
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://michaellynx.github.io/blog</loc>
- <priority>0.5</priority>
- <lastmod>2020-01-27</lastmod>
- <changefreq>weekly</changefreq>
-</url>
-<url>
- <loc>https://michaellynx.github.io/notes</loc>
- <priority>0.5</priority>
- <lastmod>2020-01-27</lastmod>
- <changefreq>weekly</changefreq>
-</url>
-<url>
  <loc>https://michaellynx.github.io/archives</loc>
  <priority>0.5</priority>
  <lastmod>2020-01-27</lastmod>
