@@ -1,5 +1,5 @@
 ---
-title: "关于罗翔与黄龄，也关于真诚与自信"
+title: "罗翔与黄龄，真诚与自信"
 layout: post
 date: 2021-01-31 09:54
 image: /assets/images/markdown.jpg
