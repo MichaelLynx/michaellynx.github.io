@@ -10,7 +10,7 @@ tag:
 star: false
 category: tech
 author: Lynx
-description: iOS的数据存取方法(Bundle、沙盒、App间分享)。最新更改时间：2020/03/09
+description: iOS的数据存取方法(Bundle、沙盒、App间分享)。最新更改时间：2021/02/20
 ---
 
 
@@ -299,7 +299,7 @@ if let array = NSArray(contentsOfFile: path) {
 - 需要在`AppDelegate`的`func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool`方法里添加代码，对接收到的文件进行处理保存
 - iOS9之前的回调是：`func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool`，如有需要则需要根据版本分别做处理
 
-当前保存在`Documents`文件夹
+当前保存在`Documents`文件夹，需注意的是添加到`Documents`文件夹的文件会被存一份到`Inbox`文件夹，而如果存入的文件含有中文，则该文件只会出现在`Inbox`文件夹。
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
