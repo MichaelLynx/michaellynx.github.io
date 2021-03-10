@@ -9,7 +9,7 @@ layout: page
 
 <b>个人简介</b><br>
 
-iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专线及其司机端、使命者、乐宝、zayaCare等项目。欢迎通过邮件或者其他途径交流技术，相互学习。
+iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专线、使命者、乐宝、zayaCare、ZKBioCloud等项目。欢迎通过邮件或者其他途径交流技术，相互学习。
 
 
 
@@ -38,7 +38,9 @@ iOS开发程序员，熟悉objective-c及swift两种语言，开发过搭呗专�
 <b>GitHub项目</b><br>
 
 <ul>
-  <li>cocoapods第三方库：<a href="https://github.com/MichaelLynx/MCircleBoard">MCircleBoard</a></li>
+  <li>[cocoapods第三方库]环形刻度图：<a href="https://github.com/MichaelLynx/MCircleBoard">MCircleBoard</a></li>
+  <li>网络请求库封装：<a href="https://github.com/MichaelLynx/MNetwork">MNetwork</a></li>
+  <li>YModem蓝牙文件传输协议封装：<a href="https://github.com/MichaelLynx/YModemForSwift">YModemForSwift</a></li>
 </ul>
 
 
