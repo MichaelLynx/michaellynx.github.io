@@ -1,5 +1,5 @@
 ---
-title: "使用hitTest实现点击时UIView自身不响应，底下重叠的视图响应的效果"
+title: "使用hitTest实现点击重叠部分时，底下的视图响应的效果"
 layout: post
 date: 2021-03-29 05:44
 image: /assets/images/markdown.jpg
