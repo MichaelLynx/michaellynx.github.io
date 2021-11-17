@@ -9,7 +9,7 @@ tag:
 star: false
 category: blog
 author: Lynx
-description: 用正面情绪对待自己以及他人，向好发展。
+description: 善待自己以及朋友。
 ---
 
 
