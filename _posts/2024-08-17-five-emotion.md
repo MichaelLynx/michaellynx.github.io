@@ -9,9 +9,9 @@ tag:
 star: false
 category: notes
 author: Lynx
-description: 喜怒勇毅清，万物于我何有哉。
+description: 喜怒勇毅清。
 ---
 
 
 
-喜怒勇毅清，万物于我何有哉。
+喜怒勇毅清。
