@@ -83,9 +83,9 @@ App内购分为四种类型：
 
 使用苹果内购功能相关代码需要引入头文件：
 
-~~~objective-c
+```objective_c
 #import <StoreKit/StoreKit.h>
-~~~
+```
 
 
 
@@ -93,7 +93,7 @@ App内购分为四种类型：
 
 此代码调起支付功能：
 
-~~~objective-c
+```objective_c
 - (void)subscribeYearlyMemberWithResult:(void(^)(void))result {
     self.Subscribe = result;
     self.verifyVip = NO;
@@ -118,7 +118,7 @@ App内购分为四种类型：
     _request.delegate = self;
     [_request start];
 }
-~~~
+```
 
 
 
@@ -126,7 +126,7 @@ App内购分为四种类型：
 
 调起支付功能之后会执行支付请求的回调，可根据回调结果进行对应处理：
 
-~~~objective-c
+```objective_c
 // 收到返回信息
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
     NSArray *product = response.products;
@@ -159,7 +159,7 @@ App内购分为四种类型：
 // 支付后的反馈信息
 - (void)requestDidFinish:(SKRequest *)request{
 }
-~~~
+```
 
 
 
@@ -171,9 +171,9 @@ App内购分为四种类型：
 
 调用监听：
 
-~~~objective-c
+```objective_c
  [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-~~~
+```
 
 - 该功能需要添加协议：`SKPaymentTransactionObserver`。
 - 添加协议后需要添加协议方法：`- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions`，该方法用于监听购买结果。
@@ -182,7 +182,7 @@ App内购分为四种类型：
 
 协议方法：
 
-~~~objective-c
+```objective_c
 // 监听购买结果
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions {
     for (SKPaymentTransaction *tran in transactions) {
@@ -236,7 +236,7 @@ App内购分为四种类型：
     }
     // 网络请求同步购买结果并由后台进行校验操作.
 }
-~~~
+```
 
 
 
@@ -244,9 +244,9 @@ App内购分为四种类型：
 
 调起苹果内购恢复接口:
 
-~~~objective-c
+```objective_c
 [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-~~~
+```
 
 
 
@@ -256,9 +256,9 @@ App内购分为四种类型：
 
 所以如果是自动订阅，交易监听的方法必须在App启动时调用，正常来说可以直接放在`AppDelegate`里的`didFinishLaunchingWithOptions`方法里。
 
-~~~objective-c
+```objective_c
  [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-~~~
+```
 
 - 由于在调用支付功能的时候需要调用该方法，自动订阅的时候也需要再App启动时调用，建议将支付功能封装成单例，方便使用。
 

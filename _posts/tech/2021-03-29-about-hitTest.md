@@ -95,7 +95,7 @@ view -> superView ...- > UIViewController.view -> UIViewController -> UIWindow -
 
 代码实现：
 
-~~~swift
+```swift
 override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
     let view = super.hitTest(point, with: event)
     guard view == self else {
@@ -115,7 +115,7 @@ inView.layer.contains(relatePoint) && inView != view {
     }
     return view
 }
-~~~
+```
 
 
 

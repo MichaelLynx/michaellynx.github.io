@@ -124,7 +124,7 @@ print("时间戳对应的时间：\(formatter.string(from: now))")
 
 - 对设置以外的较小时间单位默认缺省置零，如只设置到日，则时分秒皆置零
 
-```objective-c
+```objective_c
 NSDate *now = [NSDate date];
 NSCalendar *calendar = [NSCalendar currentCalendar];
 NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute fromDate:now];

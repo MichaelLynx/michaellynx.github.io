@@ -265,7 +265,7 @@ if let array = NSArray(contentsOfFile: path) {
 
 可以直接存放进plist，也可以以`Source code`的方式编辑保存：
 
-```
+```xml
 <key>CFBundleDocumentTypes</key>
 <array>
     <dict>

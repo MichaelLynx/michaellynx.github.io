@@ -23,7 +23,7 @@ description: 更改图片颜色的相关方法。
 
 .h文件：
 
-~~~objective-c
+```objective_c
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -37,11 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-~~~
+```
 
 .m文件：
 
-~~~objective-c
+```objective_c
 #import "UIImage+ChangeColor.h"
 
 @implementation UIImage (ChangeColor)
@@ -73,24 +73,24 @@ NS_ASSUME_NONNULL_END
 }
 
 @end
-~~~
+```
 
 当对作为tabbar的图标做染色时发现图片被显示成系统默认的蓝色了，此时可以调用以下方法对图片做进一层封装，调用时使用以下方法即可：
 
-~~~objective-c
+```objective_c
 - (UIImage *)originalImageWithColor:(UIColor *)color {
     UIImage *img = [self imageWithColor:color];
     img = [img imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
     return img;
 }
-~~~
+```
 
 使用方式：
 
-~~~objective-c
+```objective_c
 UIImage *image= [UIImage imageNamed:@"tab_home_selected"];
 image = [image imageWithColor:[UIColor redColor]];
-~~~
+```
 
 参考文章：[iOS改变图片的颜色](https://www.jianshu.com/p/10047407463c)
 
@@ -104,7 +104,7 @@ image = [image imageWithColor:[UIColor redColor]];
 
 .h文件：
 
-~~~objective-c
+```objective_c
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -120,11 +120,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-~~~
+```
 
 .m文件
 
-~~~objective-c
+```objective_c
 #import "UIImage+Rander.h"
 #import "UIColor+RGB.h"
 
@@ -247,13 +247,13 @@ void providerReleaseDataCallback (void *info, const void *data, size_t size) {
 }
 
 @end
-~~~
+```
 
 该方法调用了UIColor的类扩展，以下是扩展内容
 
 .h文件
 
-~~~objective-c
+```objective_c
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -265,11 +265,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-~~~
+```
 
 .m文件
 
-~~~objective-c
+```objective_c
 #import "UIColor+RGB.h"
 
 @implementation UIColor (RGB)
@@ -296,7 +296,7 @@ NS_ASSUME_NONNULL_END
 }
 
 @end
-~~~
+```
 
 参考文章：[iOS修改图片颜色（修改像素色值）](https://www.jianshu.com/p/619ef8423895)
 
