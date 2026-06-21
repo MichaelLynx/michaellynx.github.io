@@ -40,7 +40,7 @@ layout: compress
 </head>
 <body>
 
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}{% if page.category %} wrapper-{{ page.category }}{% endif %}">
         {% if page.tags %}
             <div class="post post-{{ page.category | default: 'uncategorized' }}">
         {% else %}
