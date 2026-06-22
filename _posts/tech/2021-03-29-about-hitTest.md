@@ -83,7 +83,7 @@ view -> superView ...- > UIViewController.view -> UIViewController -> UIWindow -
 
 已知视图B和C分别加载在视图A上，其中B在C底下，当我们点击C与B的重叠部分之后，要求返回的响应结果重叠部位底下的视图，即B视图的，而非默认的C，且其他的地方的点击正常。
 
-![](https://i.niupic.com/images/2021/04/02/9glh.png)
+
 
 ## 实现方法
 
