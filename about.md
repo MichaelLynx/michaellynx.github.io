@@ -3,13 +3,13 @@ title: About
 layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.profile_bk }})
-<figcaption class="caption">{{site.bio}}</figcaption>
+<figcaption class="caption">MichaelLynx是Michael&Lynx，两个代号。</figcaption>
 
 
 
 <b>个人简介</b><br>
 
-iOS开发，欢迎通过邮件或者其他途径交流技术，相互学习。
+一个普通的iOS开发人员，欢迎通过邮件或者其他途径交流技术，相互学习。
 
 
 
@@ -34,7 +34,6 @@ iOS开发，欢迎通过邮件或者其他途径交流技术，相互学习。
 </ul>
 
 
-
 <b>关注</b><br>
 
 <ul>
@@ -45,7 +44,6 @@ iOS开发，欢迎通过邮件或者其他途径交流技术，相互学习。
 </ul>
 
 
-
 <b>博客发展历史</b><br>
 
 <ul>
@@ -53,6 +51,12 @@ iOS开发，欢迎通过邮件或者其他途径交流技术，相互学习。
   <li>2020/01/20：使用<a href="https://github.com/sergiokopplin/indigo">indigo</a>作为主题重新搭建博客</li>
   <li>2020/01/22：评论由disqus替换为valine，现在国内用户也可以正常使用评论功能了。</li>
 </ul>
+
+
+<b>个人吐槽</b><br>
+
+valine要停止支持了，好烦，又得重新配置评论模块了。等到valine停止支持了，这些评论数据估计就没有了。——2026/07/26
+
 
 
 
